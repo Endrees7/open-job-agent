@@ -1,0 +1,11 @@
+{
+  "display_name": "Example Candidate (fictional)",
+  "priority_terms": ["automation", "integration", "integracao", "automacao", "operations"],
+  "confirmed_skills": ["python", "api", "webhook", "workflow"],
+  "preferred_workplace": "remote",
+  "country_keywords": ["brazil", "brasil", "latam"],
+  "minimum_monthly_brl": {"CLT": null, "PJ": null},
+  "review_score_threshold": 65,
+  "max_jobs_per_run": 40,
+  "max_boards_per_run": 12
+}

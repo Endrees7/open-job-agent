@@ -1,0 +1,4 @@
+{
+  "boards": [],
+  "help": "Fill private config/sources.json or OJA_SOURCES_JSON with officially public Greenhouse, Lever or Ashby employer-board slugs. No sources are activated by default."
+}

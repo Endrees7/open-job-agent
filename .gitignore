@@ -1,0 +1,23 @@
+# Personal configuration, credentials, runtime data, editor state
+.env
+.env.*
+!.env.example
+config/private/
+config/profile.json
+config/sources.json
+private/
+build/
+reports/
+*.log
+*.pdf
+*.docx
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+*.sqlite
+*.db

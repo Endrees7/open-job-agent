@@ -1,0 +1,32 @@
+[
+  {
+    "id": "demo:sample-101",
+    "provider": "demo",
+    "company": "Example Labs (fictional)",
+    "title": "Automation & Integration Analyst",
+    "location": "Remote - Brazil",
+    "workplace_type": "remote",
+    "description": "Remote in Brazil. Python, API, webhook and workflow automation. Contract CLT. Compensation not disclosed; review with recruiter.",
+    "url": "https://example.org/jobs/sample-101"
+  },
+  {
+    "id": "demo:sample-102",
+    "provider": "demo",
+    "company": "Sample Systems (fictional)",
+    "title": "Integration Operations Specialist",
+    "location": "Hybrid - Brazil",
+    "workplace_type": "hybrid",
+    "description": "Hybrid role in Brazil using API integrations. Requires on-site office days.",
+    "url": "https://example.org/jobs/sample-102"
+  },
+  {
+    "id": "demo:sample-103",
+    "provider": "demo",
+    "company": "Illustration Co. (fictional)",
+    "title": "Customer Service Associate",
+    "location": "Remote",
+    "workplace_type": "remote",
+    "description": "Phone support. Location eligibility not specified.",
+    "url": "https://example.org/jobs/sample-103"
+  }
+]

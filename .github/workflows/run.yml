@@ -1,0 +1,41 @@
+name: Open Job Agent (manual)
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'demo = fictitious offline data; scan = configured public job boards and optional Google sync'
+        required: true
+        type: choice
+        default: demo
+        options:
+          - demo
+          - scan
+permissions:
+  contents: read
+concurrency:
+  group: open-job-agent-manual
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -e .
+      - name: Demo (safe with zero secrets)
+        if: inputs.mode == 'demo'
+        run: python -m jobagent.cli demo
+      - name: Scan and sync (requires private GitHub Secrets)
+        if: inputs.mode == 'scan'
+        env:
+          OJA_PROFILE_JSON: ${{ secrets.OJA_PROFILE_JSON }}
+          OJA_SOURCES_JSON: ${{ secrets.OJA_SOURCES_JSON }}
+          OJA_APPS_SCRIPT_URL: ${{ secrets.OJA_APPS_SCRIPT_URL }}
+          OJA_HMAC_SECRET: ${{ secrets.OJA_HMAC_SECRET }}
+        run: python -m jobagent.cli scan --send

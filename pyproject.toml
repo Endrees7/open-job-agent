@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-job-agent"
+version = "0.1.0"
+description = "Privacy-first job discovery and explainable matching (public portfolio demo)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31,<3"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+open-job-agent = "jobagent.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jobagent*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
